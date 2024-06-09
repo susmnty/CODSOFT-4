@@ -1,7 +1,6 @@
 import tkinter as tk
 import random
 
-# Function to determine the winner
 def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         return "It's a tie!"
@@ -12,14 +11,12 @@ def determine_winner(user_choice, computer_choice):
     else:
         return "Computer wins!"
 
-# Function to play the game
 def play_game():
     user_choice = var.get()
     computer_choice = random.choice(choices)
     result = determine_winner(user_choice, computer_choice)
     label_result.config(text=f"Your choice: {user_choice}\nComputer's choice: {computer_choice}\n{result}")
 
-# Create GUI
 root = tk.Tk()
 root.title("Rock, Paper, Scissors Game")
 
